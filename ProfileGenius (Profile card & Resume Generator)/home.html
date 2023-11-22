@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfileGenius</title>
+    <link rel="website icon" type="png" href="https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_1280.png">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script> -->
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.8.162/build/pdf.min.js"></script> -->
+    
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          
+          // Close the dropdown if the user clicks outside of it
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+    </script>
+    <style>
+        .dropbtn {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-left: 86px;
+            
+          }
+          
+         
+          
+          .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 30px;
+            margin-top: 4px;
+            
+          }
+          
+          .dropdown-content {
+            display: none;
+            position: absolute;
+           height: 200px;
+            background-color: white;
+            min-width: 10px;
+            overflow: auto;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+            z-index: 1;
+            margin-left: 86px;
+          }
+          
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: small;
+            margin-top: 15px;
+            
+          }
+          
+          .dropdown a:hover {background-color: #ddd;}
+          
+          .show {display: block;}
+    </style>
+</head> 
+
+<body id="bodyy">
+   
+        <header>
+            <nav>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn"><i class="fa-solid fa-bars"></i></button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="home.html">Home</a>
+                          <a href="contact.html">Contact</a>
+                          <a href="about-us.html">About</a>
+                        </div>
+                      </div>
+                    <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about-us.html">About </a></li>
+                    <div id="toggleButton" onclick="toggleDarkMode()"><i class="fa-solid fa-moon fa-2xl"></i></div>
+                    </ul>
+            </nav>
+       
+        </header>
+    
+    
+
+    <div id="Profile-card" class="card-input">
+        <h1> Get Your Profile Card</h1>
+        <form id="profileForm" autocomplete="on">
+            <label for="username"><input class="input-item" id="username" type="text" name="username"
+                    placeholder="Username" maxlength="20" required autocapitalize="word"></label>
+            <br>
+            <label for="email"><input class="input-item" id="email" type="email" name="email" placeholder="Email"
+                    maxlength="30" required></label>
+            <br>
+            <label for="languages"><input class="input-item" id="languages" type="text" name="languages/skills"
+                    placeholder="Languages/skills"></label>
+            <br>
+            
+            <label for="work-professionn"><input class="input-item" id="work-profession" type="text"
+                    name="work-profession" placeholder="Work-profession"></label>
+            <br>
+            <label for="experience"><input class="input-item" id="experience" type="text" name="experience"
+                    placeholder="Experience"></label>
+            <br>
+            <!-- <label for="hobbies"><input class="input-item" id="hobbies" type="text" name="hobbies" placeholder="Hobbies"></label>
+                <br> -->
+            <label for="profilepic"><input class="input-item" id="profilepic" type="file" name="profilepic"
+                    accept="image/*"></label>
+            <br>
+            <label for="linkedin"><input  class="input-item" id="linkedin" type="text" name="linkedin" placeholder="Linkedin profile"></label><br>
+                <label for="twitter"><input   class="input-item" id="twitter" type="text" name="twitter" placeholder="Twitter profile"></label><br>
+                <label for="github"><input    class="input-item" id="github" type="text" name="github" placeholder="Github profile"></label>
+                <br>
+
+            <input type="submit" value="SUBMIT">
+        </form>
+    </div>
+    
+        <div id="profileCards"></div>
+        <div class="downloadButtons">
+            <select id="downloadFormat" style="display: none;">
+              <option value="png">PNG</option>
+              <option value="pdf">PDF</option>
+            </select>
+            <a id="downloadButton" href="#" style="display: none;">Download</a>
+          </div>
+          <button id="downloadPc">Download</button>
+      
+    </div>
+    <div id="Resume-Builder" class="Resume-input">
+            <h1>Create A Professional Resume</h1>
+            
+                <form id="resumeForm">
+                    <label for="fullname"><input class="input-item" id="fullname" type="text" name="fullname"
+                        placeholder="Fullname" required></label>
+                <br>
+                    <label for="Email"><input class="input-item" id="Email" type="email" name="Email"
+                        placeholder="Email" required></label>
+                <br>
+             
+
+                    <label for="contactNo"><input class="input-item" id="contactNo" type="tel" name="contactNo"
+                        placeholder="Contact-No" required></label>
+                <br>
+                    <label for="address"><input class="input-item" id="address" type="text" name="address"
+                        placeholder="Address" required></label>
+                <br>
+                
+                <label for="education"><input class="input-item" id="education" type="text" name="education"
+                    placeholder="Education (sr & sr sec)" required></label>
+            <br>
+                <label for="Experience"><input class="input-item" id="Experience" type="text" name="Experience"
+                    placeholder="Experience" required></label>
+            <br>
+                <label for="skills"><input class="input-item" id="skills" type="text" name="skills"
+                    placeholder="Skills" required></label>
+            <br>
+                <label for="hobbies"><input class="input-item" id="hobbies" type="text" name="hobbies"
+                    placeholder="Hobbies" required></label>
+            <br>
+            
+            <label for="profilepic"><input class="input-item" id="profilePic" type="file" name="profilepic"
+                accept="image/*"></label>
+            
+                    <input type="submit" value="SUBMIT">
+                </form>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.8.162/build/pdf.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+        
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.3/html2canvas.min.js"></script> -->
+        <script src="https://kit.fontawesome.com/f2053ca4e1.js" crossorigin="anonymous"></script>
+        
+    <script src="dark-mode.js"></script>
+    <script src="home.js"></script>
+    <script  src="pdf-download.js"></script>
+</body>
+
+</html>

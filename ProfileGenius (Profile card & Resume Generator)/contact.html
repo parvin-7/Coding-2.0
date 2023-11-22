@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="website icon" type="png" href="https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_1280.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          
+          // Close the dropdown if the user clicks outside of it
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+    </script>
+    <style>
+        .dropbtn {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-left: 86px;
+            
+          }
+          
+         
+          
+          .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 30px;
+            margin-top: 4px;
+            
+          }
+          
+          .dropdown-content {
+            display: none;
+            position: absolute;
+           height: 200px;
+            background-color: white;
+            min-width: 10px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-left: 86px;
+          }
+          
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: small;
+            margin-top: 15px;
+
+          }
+          
+          .dropdown a:hover {background-color: #ddd;}
+          
+          .show {display: block;}
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn"><i class="fa-solid fa-bars"></i></button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="home.html">Home</a>
+                      <a href="about-us.html">About</a>
+                      <a href="contact.html">Contact</a>
+                    </div>
+                  </div>
+                <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about-us.html">About </a></li>
+                <div id="toggleButton" onclick="toggleDarkMode()"><i class="fa-solid fa-moon fa-2xl"></i></div>
+                </ul>
+        </nav>
+   
+    </header>
+
+    <form >      
+        <input name="name" type="text" class="feedback-input" placeholder="Name" required/>   
+        <input name="contactNo" type="tel" class="feedback-input" placeholder="Contact-no (optional)" />
+        <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+        <input type="submit" value="SUBMIT"/>
+      </form>
+    
+      <footer>
+        <div class="footer-links">
+            <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/parvin7/" ><span class="icon"><i
+                class="fa-brands fa-linkedin"></i></span></a>
+    <a target="_blank" rel="noopener" href="https://www.twitter.com" ><span class="icon"><i
+                class="fa-brands fa-twitter"></i></span></a>
+    <a target="_blank" rel="noopener" href="https://github.com/parvin-7" ><span class="icon"><i
+                class="fa-brands fa-github"></i></span></a>
+     <a target="_blank" rel="noopener" href="https://stackoverflow.com/users/22101217/parvin" ><span class="icon"><i
+                 class="fa-brands fa-stack-overflow"></i></span></a>
+        </div>
+        <p class="copyright">© 2023 ProfileGenius. All rights reserved.</p>
+      </footer>
+      <script  src="dark-mode.js" ></script>
+    <script src="https://kit.fontawesome.com/f2053ca4e1.js" crossorigin="anonymous"></script>
+    <!-- <script src="contacting.js">  </script> -->
+</body>
+</html>

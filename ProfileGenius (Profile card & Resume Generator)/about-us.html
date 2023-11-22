@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="website icon" type="png" href="https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_1280.png">
+
+  <link rel="stylesheet" href="about-us.css">
+  <link rel="stylesheet" href="dark-mode.css">
+  <script src="https://kit.fontawesome.com/f2053ca4e1.js" crossorigin="anonymous"></script>
+</head>
+<script>
+  function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+</script>
+<style>
+  .dropbtn {
+      background-color: white;
+      color: black;
+      padding: 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      margin-left: 86px;
+      
+    }
+    
+   
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin-left: 30px;
+      margin-top: 4px;
+      
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+     height: 200px;
+      background-color: white;
+      min-width: 10px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      margin-left: 86px;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: small;
+      margin-top: 15px;
+
+    }
+    
+    .dropdown a:hover {background-color: #ddd;}
+    
+    .show {display: block;}
+</style>
+<body>
+    
+  <header>
+    <nav>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"><i class="fa-solid fa-bars"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="home.html">Home</a>
+                  <a href="about-us.html">About</a>
+                  <a href="contact.html">Contact</a>
+                </div>
+              </div>
+            <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about-us.html">About </a></li>
+            <div id="toggleButton" onclick="toggleDarkMode()"><i class="fa-solid fa-moon fa-2xl"></i></div>
+            </ul>
+    </nav>
+
+</header>
+
+
+  <main>
+    <section class="about-section">
+        <h1>About ProfileGenius Generator</h1>
+        <p>
+          Welcome to the ProfileGenius Generator, a user-friendly web application that allows you to create personalized Profile-cards and Resumes in a matter of seconds. Whether you're showcasing your professional portfolio, introducing yourself to potential employers, or simply sharing your interests with others, our platform makes it easy to create stunning Profile-cards and Resume with just a few clicks.
+        </p>
+        <p>
+          Our goal is to empower users with a simple yet powerful tool that lets them express their unique identities in a visually appealing and professional manner. We believe that a well-crafted Profile-cards and Resumes can leave a lasting impression and open doors to exciting opportunities.
+        </p>
+        <h2>How it Works</h2>
+        <p>
+          To get started, simply fill in your details using our user-friendly input form. You can enter your name, email address, skills, experience, hobbies, etc... and even upload your profile picture. Our intuitive interface allows you to preview your Profile-cards and Resumes in real-time as you enter your information, ensuring that you're happy with the result.
+        </p>
+        <p>
+          Once you're satisfied with your Profile-cards and Resumes, you can choose from a variety of stylish layouts and themes to customize its appearance. Pick the colors, fonts, and design elements that best represent your personality and style.
+        </p>
+        <h2>Share and Download</h2>
+        <p>
+          Once your Profile-cards and Resumes is ready, you have the option to download it as an image file (PNG or JPG) and save it to your device. You can also generate a unique shareable link to your Profile-cards and Resumes, making it easy to share it with others on social media, through emails, or on your website.
+        </p>
+        <h2>Join Our Community</h2>
+        <p>
+          We are passionate about empowering individuals to create stunning Profile Cards and Resume that leave a lasting impression. Join our growing community of users and start showcasing your unique profile today! If you have any questions or feedback, feel free to reach out to our friendly support team. Regards ProfileGenius!
+        </p>
+      </section>
+  </main>
+
+  <script src="https://kit.fontawesome.com/f2053ca4e1.js" crossorigin="anonymous"></script>
+  
+  <script  src="dark-mode.js" ></script>
+
+</body>
+
+</html>

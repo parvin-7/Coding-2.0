@@ -14,7 +14,7 @@ scanf("%d",&r);
     printf("Area= ",area);
 
 
-    peri=2*3.14*r;
+    peri=2*3.34*r;
 
     printf("peri= ",peri);
     return 0;

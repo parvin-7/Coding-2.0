@@ -2,7 +2,7 @@
 using namespace std;
 int main(){
     int i=1,j,n;
-    cout<<"Enter no. of lines: "<<endl;
+    cout<<"Enter some no. of lines: "<<endl;
     cin>>n;
     while(i<=n){
         int j = 1;
